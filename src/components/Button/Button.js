@@ -1,17 +1,8 @@
 import React from 'react';
-
-const buttonStyle = {
-  padding: '10px 20px',
-  fontSize: '16px',
-  backgroundColor: '#007bff',
-  color: '#fff',
-  border: 'none',
-  borderRadius: '5px',
-  cursor: 'pointer',
-};
+import './Button.scss'
 
 function Button(props) {
-  const { onClick, children, style } = props;
+  const { onClick, children, className } = props;
 
   const handleClick = () => {
     if (onClick) {
@@ -20,7 +11,7 @@ function Button(props) {
   };
 
   return (
-    <button onClick={handleClick} style={{ ...buttonStyle, ...style }}>
+    <button className={`primary-button ${className}`} onClick={handleClick}>
       {children}
     </button>
   );
