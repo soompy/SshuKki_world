@@ -1,17 +1,18 @@
 import React from "react";
+import "./Home.scss";
 import Button from "../../components/Button/Button";
 
 const Home = () => {
   return (
-    <div>
-      <section>
+    <div className="main-container">
+      <section className="area-common">
         <div className="center-text">
           <p>쓔끼</p>
           <p>월드</p>
         </div>
       </section>
 
-      <section className="bg-container">
+      <section className="area-common">
         <span>
           <img src="" alt="배경1"></img>
         </span>

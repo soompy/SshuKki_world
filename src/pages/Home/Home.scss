@@ -1,0 +1,19 @@
+.main-container {
+    position: relative;
+    .area-common {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        .center-text {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            font-size: 40px;            
+        }
+    }
+}
