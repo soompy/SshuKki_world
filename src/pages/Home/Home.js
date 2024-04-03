@@ -13,9 +13,20 @@ const Home = () => {
       </section>
 
       <section className="area-common">
-        <span>
-          <img src="" alt="배경1"></img>
-        </span>
+        <div className="bg-box">
+          <span className="bg bg-01">
+            <img src="" alt="배경1"></img>
+          </span>
+          <span className="bg bg-02">
+            <img src="" alt="배경2"></img>
+          </span>
+          <span className="bg bg-03">
+            <img src="" alt="배경3"></img>
+          </span>
+          <span className="bg bg-04">
+            <img src="" alt="배경4"></img>
+          </span>
+        </div>
       </section>
       <Button></Button>
     </div>
