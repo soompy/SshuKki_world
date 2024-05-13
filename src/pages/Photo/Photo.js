@@ -4,7 +4,7 @@ import "./Photo.scss";
 const Photo = () => {
     return (
         <div>
-
+            포토페이지
         </div>
     )
 }

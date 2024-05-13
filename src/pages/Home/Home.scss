@@ -22,19 +22,28 @@
             width: 100%;
             height: 100%;
             .bg {
+                display: block;
                 position: absolute;
-                // &.bg-01 {
-
-                // }
-                // &.bg-02 {
-                    
-                // }
-                // &.bg-03 {
-                    
-                // }
-                // &.bg-04 {
-                    
-                // }
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 200px;
+                height: 200px;
+                &.bg-01 {
+                    left: 10%;
+                    top: 20%;                    
+                }
+                &.bg-02 {
+                    left: 10%;
+                    top: 60%;    
+                }
+                &.bg-03 {
+                    right: 10%;
+                    top: 20%;
+                }
+                &.bg-04 {
+                    right: 10%;
+                    top: 60%;
+                }
             }
         }
     }
