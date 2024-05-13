@@ -7,6 +7,29 @@ import bg1 from '../../assets/images/bg1.png';
 // import bg4 from '../../assets/images/bg4.png';
 
 const Home = () => {
+  const numStrokes = 20;
+  
+  const renderStrokes = () => {
+    const strokes = [];
+    const containerWidth = window.innerWidth;
+    const containerHeight = window.innerHeight; 
+    
+    for (let i = 0; i < numStrokes; i++) {
+      const left = Math.random() * containerWidth;
+      const top = Math.random() * containerHeight;
+      const length = Math.random() * 400 + 100;
+
+      strokes.push(
+        <span
+          key={i}
+          className="stroke"
+          style={{ left: `${left}px`, top: `${top}px`, width: `${length}px` }}
+        ></span>
+      );
+    }
+    return strokes;
+  };
+
   return (
     <div className="main-container">
       <section className="area-common">
@@ -30,6 +53,8 @@ const Home = () => {
           <span className="bg bg-04">
             {/* <img src={bg4} alt="배경4"></img> */}
           </span>
+
+          {renderStrokes()}
         </div>
       </section>
       <Button></Button>
