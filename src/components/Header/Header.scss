@@ -5,6 +5,7 @@ header {
     position: fixed;
     left: 0;
     top: 0;
+    z-index: 1;
     width: 100%;
     background-color: $background-color_1;
     color: $color_1;
@@ -15,6 +16,7 @@ header {
         align-items: center;
         max-width: 1400px;
         margin: auto;
+        padding: 0 40px;
     }
 }
 

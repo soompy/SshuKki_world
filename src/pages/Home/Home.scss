@@ -1,104 +1,117 @@
 .main-container {
     position: relative;
+    width: 100%;
+    height: 100%;
 
-    .area-common {
-        position: absolute;
-        left: 0;
-        top: 0;
+    .visual {
+        overflow: hidden;
+        position: relative;
         width: 100%;
         height: 100vh;
+        background: #0f0f0f;
+        z-index: -1;
 
-        .center-text {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            width: 100%;
-            height: 100%;
-            font-size: 100px;
-            font-weight: 900;
-            color: #ffffff;
-            text-shadow: 3px 3px 6px rgb(123, 123, 123);
-        }
-
-        .bg-box {
+        .area-common {        
             position: absolute;
             left: 0;
             top: 0;
-            z-index: -1;
             width: 100%;
             height: 100%;
-            background: #0f0f0f;
-
-            .bg {
-                display: block;
+    
+            .center-text {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                width: 100%;
+                height: 100%;
+                font-size: 100px;
+                font-weight: 900;
+                color: #ffffff;
+                text-shadow: 3px 3px 6px rgb(123, 123, 123);
+            }
+    
+            .bg-box {
                 position: absolute;
-                background-repeat: no-repeat;
-                background-size: contain;
-                width: 200px;
-                height: 200px;
-
-                &.bg-01 {
-                    left: 10%;
-                    top: 20%;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;                
+    
+                .bg {
+                    display: block;
+                    position: absolute;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    width: 200px;
+                    height: 200px;
+    
+                    &.bg-01 {
+                        left: 10%;
+                        top: 20%;
+                    }
+    
+                    &.bg-02 {
+                        left: 10%;
+                        top: 60%;
+                    }
+    
+                    &.bg-03 {
+                        right: 10%;
+                        top: 20%;
+                    }
+    
+                    &.bg-04 {
+                        right: 10%;
+                        top: 60%;
+                    }
                 }
-
-                &.bg-02 {
-                    left: 10%;
-                    top: 60%;
-                }
-
-                &.bg-03 {
-                    right: 10%;
-                    top: 20%;
-                }
-
-                &.bg-04 {
-                    right: 10%;
-                    top: 60%;
-                }
+            }
+        }
+    
+        .stroke {
+            display: block;
+            position: absolute;
+            top: 50%;
+            width: 500px;
+            height: 6px;        
+            background: #3d3d3d;     
+            animation-fill-mode: backwards;
+            &:nth-child(even) {
+                animation: blackHole1 3s infinite;      
+            }
+    
+            &:nth-child(odd) {
+                animation: blackHole2 3s infinite;        
+            }
+        }
+    
+        @keyframes blackHole1 {
+            0% {
+                transform: scale(1);;
+                opacity: 1;
+            }
+    
+            100% {
+                transform: scale(0.8);
+                opacity: 0.1;
+            }
+        }
+    
+        @keyframes blackHole2 {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+    
+            100% {
+                transform: scale(0.8);
+                opacity: 0.1;
             }
         }
     }
 
-    .stroke {
-        display: block;
-        position: absolute;
-        top: 50%;
-        width: 500px;
-        height: 6px;        
-        background: #3d3d3d;     
-        animation-fill-mode: backwards;
-        &:nth-child(even) {
-            animation: blackHole1 3s infinite;      
-        }
-
-        &:nth-child(odd) {
-            animation: blackHole2 3s infinite;        
-        }
-    }
-
-    @keyframes blackHole1 {
-        0% {
-            transform: scale(1);;
-            opacity: 1;
-        }
-
-        100% {
-            transform: scale(0.8);
-            opacity: 0.1;
-        }
-    }
-
-    @keyframes blackHole2 {
-        0% {
-            transform: scale(1);
-            opacity: 1;
-        }
-
-        100% {
-            transform: scale(0.8);
-            opacity: 0.1;
-        }
+    .intro {
+       
     }
 }
