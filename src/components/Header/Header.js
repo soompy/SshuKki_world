@@ -30,17 +30,7 @@ const Header = () => {
           </ul>
         </nav>
 
-        <Router>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/taste" element={<Taste />} />
-            <Route path="/painting" element={<Painting />} />
-            <Route path="/photo" element={<Photo />} />
-            {/* <Route path="/goods" element={<Goods />} />
-            <Route path="*" element={<NotFound />} /> */}
-          </Routes>
-        </Router>
-
+       
 
       </div>
     </header>
